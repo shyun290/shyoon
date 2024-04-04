@@ -91,7 +91,7 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 
-st.title("DocumentGPT")
+st.title("SHYUN's DocumentGPT💕")
 st.markdown(
     """
 Welcome!
@@ -107,7 +107,7 @@ with st.sidebar:
         st.session_state.api_key = ""
 
     api_key = st.text_input(
-        "Input your OPENAI_API_KEY here !!",
+        "❗Input your OPENAI_API_KEY here !!",
         value=st.session_state["api_key"],
         key="api_key_input",
     )
@@ -128,7 +128,7 @@ with st.sidebar:
 
     st.markdown(
         """
-        GitHub 링크: https://github.com/shyun290/shyoon/blob/master/pages/01_DocumentGPT.py
+        GitHub👻 링크: https://github.com/shyun290/shyoon/blob/master/pages/01_DocumentGPT.py
     
         """
     )
