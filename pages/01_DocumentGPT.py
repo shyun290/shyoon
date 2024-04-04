@@ -128,7 +128,7 @@ with st.sidebar:
 
     st.markdown(
         """
-        GitHub 링크: https://github.com/LifeFi/py_w08_fullstack_gpt_d15/blob/d23/pages/D23_DocumentGPT.py
+        GitHub 링크: https://github.com/shyun290/shyoon/blob/master/pages/01_DocumentGPT.py
     
         """
     )
