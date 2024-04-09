@@ -7,10 +7,6 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 import streamlit as st
 
-llm = ChatOpenAI(
-    temperature=0.1,
-)
-
 answers_prompt = ChatPromptTemplate.from_template(
     """
     Using ONLY the following context answer the user's question. If you can't just say you don't know, don't make anything up.
@@ -177,6 +173,11 @@ with st.sidebar:
 
 if not api_key:
     st.warning("Input your OPENAI_API_KEY on the sidebar!")
+else:
+    llm = ChatOpenAI(
+        temperature=0.1,
+        openai_api_key=api_key,
+    )
 
 
 if url:
@@ -186,7 +187,7 @@ if url:
     else:
         retriever = load_website(url)
         query = st.text_input("Ask a question to the website.")
-        if query:
+        if query and api_key:
             chain = (
                 {
                     "docs": retriever,
