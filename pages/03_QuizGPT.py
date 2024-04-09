@@ -59,6 +59,8 @@ with st.sidebar:
     )
     st.session_state["api_key"] = api_key
 
+    st.divider()
+
     docs = None
     topic = None
     choice = st.selectbox(
@@ -79,6 +81,15 @@ with st.sidebar:
         topic = st.text_input("Search Wikipedia...")
         if topic:
             docs = wiki_search(topic)
+
+    st.divider()
+
+    st.markdown(
+        """
+        GitHub👻 링크: https://github.com/shyun290/shyoon/blob/master/pages/03_QuizGPT.py
+    
+        """
+    )
 
 if not api_key:
     st.warning("Input your OPENAI_API_KEY on the sidebar!")
